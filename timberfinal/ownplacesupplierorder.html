@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>OWNER | NEW SEDAWATTE TIMBER STORE</title>
+    <link rel="stylesheet" type="text/css" href="functionstyle.css">
+    <link rel="icon" href="timberlogo.png" type="image/x-icon">
+
+</head>
+<body>
+    <div class="header">
+        <div class="back-button">
+            <a href="javascript:history.back()">&#10096; Back</a>
+        </div>
+        NEW SEDAWATTE TIMBER STORES
+        <button class="logout-btn" onclick="window.location.href='1main.html'">LOGOUT</button>
+    </div>
+
+    <div class="tabs">
+        <a href="ownmanageemp.html">Employee</a>
+        <a href="ownmanagesup.html">Supplier</a>
+        <a href="ownmanagedep.html">Department</a>
+        <a href="ownviewinventory.php">Inventory</a>
+        <a href="ownreports.html">Reports</a>
+        <a class="active" href="ownplacesupplierorder.html">Place Order</a>
+    </div>
+
+    <div class="container">
+        <form action="ownsupplierorder.php" method="POST">
+            <div class="form-group">
+                <label for="orderid">Order ID</label>
+                <input type="text" name="orderid" placeholder="Enter Order ID" required>
+            </div>
+            <div class="form-group">
+                <label for="orderdate">Order Date</label>
+                <input type="date" name="orderdate" placeholder="Select Date" required>
+            </div>
+            <div class="form-group">
+                <label for="suppliername">Supplier Name</label>
+                <input type="text"name="suppliername" placeholder="Enter Supplier name" required>
+            </div>
+            <div class="form-group">
+                <label for="status">Status</label>
+                <input type="text"name="status" placeholder="Enter status" required>
+            </div>
+            <div class="form-group">
+                <label for="totalamt">Total Amount</label>
+                <input type="text" name="totalamt" placeholder="Total Amount" required>
+            </div>
+            <div class="buttons">
+                <button type="submit" name="action" value="placeorder">Place Order</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

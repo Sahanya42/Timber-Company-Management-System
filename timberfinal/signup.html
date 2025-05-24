@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Customer</title>
+    <link rel = "stylesheet" type = "text/css" href = "signup.css">
+    <link rel="icon" href="timberlogo.png" type="image/x-icon">
+</head>
+<body>
+    <div class="back-button">
+        <a href="javascript:history.back()">&#10096; Back</a>
+    </div>
+    <div class="container">
+        <div class="welcome-section">
+            <h1>WELCOME TO</h1>
+            <h2>NEW SEDAWATTE TIMBER STORES</h2>
+        </div>
+        <div class="signup-section">
+            <h2>SIGNUP</h2>
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" id="name" placeholder="Enter your name">
+            </div>
+            <div class="form-group">
+                <label for="address">Address</label>
+                <input type="text" id="address" placeholder="Enter your address">
+            </div>
+            <div class="form-group">
+                <label for="contact">Contact</label>
+                <input type="text" id="contact" placeholder="Enter your contact number">
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" placeholder="Enter your email">
+            </div>
+            <div class="form-group">
+                <label for="username">Username</label>
+                <input type="text" id="username" placeholder="Choose a username">
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" placeholder="Create a password">
+            </div>
+            <button class="signup-btn" onclick="signup()">SIGNUP</button>
+            <div class="login-link">
+                <a href="cuslogin.html">Already Signed up? LOGIN!</a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function signup() {
+            const name = document.getElementById("name").value;
+            const address = document.getElementById("address").value;
+            const contact = document.getElementById("contact").value;
+            const email = document.getElementById("email").value;
+            const username = document.getElementById("username").value;
+            const password = document.getElementById("password").value;
+
+            fetch("signup.php", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({ 
+                    customername: name, 
+                    customeraddress: address, 
+                    customercontact: contact, 
+                    customeremail: email, 
+                    customerusername: username, 
+                    customerpassword: password 
+                })
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.success) {
+                    alert("Signup successful! Redirecting to login page.");
+                    window.location.href = "cuslogin.html";
+                } else {
+                    alert("Error: " + data.message);
+                }
+            })
+            .catch(error => {
+                console.error("Error:", error);
+                alert("An unexpected error occurred.");
+            });
+        }
+    </script>
+</body>
+</html>

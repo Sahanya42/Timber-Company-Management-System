@@ -1,0 +1,125 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    display: flex;
+    width: 80%;
+    max-width: 1000px;
+    align-items: center;
+}
+
+.welcome-section {
+    flex: 1;
+    text-align: center;
+    color: #682916;
+    padding: 50px;
+}
+
+.welcome-section h1 {
+    margin: 0;
+    font-size: 28px;
+    color: #014F56;
+}
+
+.welcome-section h2 {
+    margin: 10px 0;
+    font-size: 48px;
+    font-weight: bold;
+    color: #800000;
+}
+
+.signup-section {
+    flex: 1;
+    background-color: white;
+    padding: 50px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.signup-section h2 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #003824;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 16px;
+    margin-bottom: 5px;
+    color: #003824;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #003824;
+    border-radius: 20px;
+    font-size: 14px;
+}
+
+.signup-btn {
+    display: block;
+    width: 105%;
+    padding: 10px;
+    background-color: #682916;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    font-size: 16px;
+    cursor: pointer;
+    text-align: center;
+    font-weight: bold;
+    margin-top: 15px;
+}
+
+.signup-btn:hover {
+    background-color: #b0563c;
+}
+
+.login-link {
+    text-align: center;
+    margin-top: 15px;
+}
+
+.login-link a {
+    color: #003824;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.login-link a:hover {
+    text-decoration: underline;
+}
+
+.back-button {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+
+.back-button a {
+    text-decoration: none;
+    font-size: 1rem;
+    color: #800000;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+}
+
+.back-button a:hover {
+    text-decoration: underline;
+}

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>LOGIN | NEW SEDAWATTE TIMBER STORES</title>
+    <link rel = "stylesheet" type = "text/css" href = "loginstyle.css">
+    <link rel="icon" href="timberlogo.png" type="image/x-icon">
+</head>
+<body>
+    <div class="back-button">
+        <a href="javascript:history.back()">&#10096; Back</a>
+    </div>
+    <div class="container">
+        <div class="welcome-section">
+            <h1>WELCOME TO</h1>
+            <h2>NEW SEDAWATTE TIMBER STORES</h2>
+        </div>
+        <div class="login-section">
+            <h2>LOGIN</h2>
+            <form action="emplogin.php" method="POST">
+                <div class="form-group">
+                    <label for="username">Username</label>
+                    <input type="text" id="username" name="username" placeholder="Enter Your Username" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" placeholder="Enter Your Password" required>
+                </div>
+                <button type="submit" class="login-btn">LOGIN</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>MANAGE SUPPLIER | NEW SEDAWATTE TIMBER STORE</title>
+    <link rel="stylesheet" type="text/css" href="functionstyle.css">
+    <link rel="icon" href="timberlogo.png" type="image/x-icon">
+
+</head>
+<body>
+    <div class="header">
+        <div class="back-button">
+            <a href="javascript:history.back()">&#10096; Back</a>
+        </div>
+        NEW SEDAWATTE TIMBER STORES
+        <button class="logout-btn" onclick="window.location.href='1main.html'">LOGOUT</button>
+    </div>
+
+    <div class="tabs">
+        <a href="ownmanageemp.html">Employee</a>
+        <a class="active" href="ownmanagesup.html">Supplier</a>
+        <a href="ownmanagedep.html">Department</a>
+        <a href="ownviewinventory.php">Inventory</a>
+        <a href="ownreports.html">Reports</a>
+        <a href="ownplacesupplierorder.html">Place Order</a>
+    </div>
+
+    <div class="container">
+        <form action="ownsubmitsup.php" method="POST">
+            <div class="form-group">
+                <label for="supid">Supplier ID</label>
+                <input type="text" name="supid" placeholder="Enter Supplier ID" required>
+            </div>
+            <div class="form-group">
+                <label for="supname">Supplier Name</label>
+                <input type="text" name="supname" placeholder="Enter Supplier Name" required>
+            </div>
+            <div class="form-group">
+                <label for="supcont">Contact No</label>
+                <input type="text"name="supcont" placeholder="Enter Contact No" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" name="email" placeholder="Enter Email" required>
+            </div>
+            <div class="form-group">
+                <label for="supadd">Address</label>
+                <input type="supadd" name="supadd" placeholder="Enter Address" required>
+            </div>
+            <div class="form-group">
+                <label for="username">Username</label>
+                <input type="text" name="username" placeholder="Enter Username for Supplier" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="text" name="password" placeholder="Enter Password for Supplier" required>
+            </div>
+            <div class="buttons">
+                <button type="submit" name="action" value="add">Add</button>
+                <button type="submit" name="action" value="update">Update</button>
+                <button type="submit" name="action" value="delete">Delete</button>
+            </div>
+        </form>
+
+        <!-- Link to another PHP page to view data -->
+        <a href="ownviewsup.php" target="_blank" class="view-button">VIEW</a>
+        </form>
+    </div>
+</body>
+</html>

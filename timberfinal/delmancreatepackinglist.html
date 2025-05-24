@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>PACKING LIST | NEW SEDAWATTE TIMBER STORE</title>
+    <link rel = "stylesheet" type = "text/css" href = "style.css">
+    <link rel="icon" href="timberlogo.png" type="image/x-icon">
+</head>
+<body>
+    <div class="header">
+        <div class="back-button">
+            <a href="javascript:history.back()">&#10096; Back</a>
+        </div>
+        NEW SEDAWATTE TIMBER STORES
+        <button class="logout-btn" onclick="window.location.href='1main.html'">LOGOUT</button>
+    </div>
+
+    <div class="tabs">
+        <a href="deliverymanager.html">Home</a>
+        <a href="delmanempdeliverymanager.html">Employee</a>
+        <a href="delmancreateshipdoc.html">Create Shipping Document</a>
+        <a href="delmanviewshipdoc.php">View Shipping Document</a>
+        <a class="active" href="delmancreatepackinglist.html">Create Packing List</a>
+        <a href="delmanviewpackinglist.php">View Packing List</a>
+        <a href="delmanvieworders.php">View Orders</a>    
+    </div>
+
+    <div class="container">
+        <form action="delmancreatepackinglist.php" method="POST">
+            <div class="form-group">
+                <label for="packinglistid">Packing List ID:</label>
+                <input type="number" name="packinglistid" placeholder="Enter Packing List ID" required>
+            </div>
+            <div class="form-group">
+                <label for="createdate">Created Date:</label>
+                <input type="date" name="createdate" placeholder="Select Created Date" required>
+            </div>
+            <div class="form-group">
+                <label for="quantity">Product Quantity:</label>
+                <input type="number" name="quantity" placeholder="Enter Product Quantity" required>
+            </div>
+            <div class="form-group">
+                <label for="totalamt">Total Amount:</label>
+                <input type="number" name="totalamt" placeholder="Enter Total Amount" step="0.01" required>
+            </div>
+            <div class="buttons">
+                <button class="view-button" type="submit" name="action" value="add">Create Shipping Document</button>
+                <a href="delmanviewpackinglist.php" target="_blank" class="view-button">View Packing List</a>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

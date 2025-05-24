@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>SHIPMENT | NEW SEDAWATTE TIMBER STORES</title>
+    <link rel = "stylesheet" type = "text/css" href = "supplierstyle.css">
+    <link rel="icon" href="timberlogo.png" type="image/x-icon">
+</head>
+<body>
+    <div class="header">
+        <div class="back-button">
+            <a href="javascript:history.back()">&#10096; Back</a>
+        </div>
+        NEW SEDAWATTE TIMBER STORES
+        <button class="logout-btn" onclick="window.location.href='1main.html'">LOGOUT</button>
+    </div>
+
+    <div class="tabs">
+        <a href="supcheckpayments.php">Check Payment</a>
+        <a class="active" href="supmakeshipment.html">Make Shipment</a>
+        <a href="supsendshippingdoc.html">Send Shipping Document</a>
+        <a href="suppackinglist.html">Make Packing List</a>
+        <a href="supcreatesupplierinvoice.php">Create Invoice</a>
+    </div>
+
+    <div class="container">
+        <form action="supmakeshipment.php" method="POST">
+            <div class="form-group">
+                <label for="shipmentid">Shipment ID:</label>
+                <input type="text" name="shipmentid" required>
+            </div>
+
+            <div class="form-group">
+                <label for="supplierid">Supplier ID:</label>
+                <input type="text" name="supplierid" required>
+            </div>
+
+            <div class="form-group">
+                <label for="shipmentdate">Shipment Date:</label>
+                <input type="date" name="shipmentdate" required>
+            </div>
+
+            <div class="form-group">
+                <label for="deliverystatus">Delivery Status:</label>
+                <input type="radio" id="delivered" name="deliverystatus" value="Delivered" required>
+                <label for="delivered">Delivered</label>
+                <input type="radio" id="notdelivered" name="deliverystatus" value="Not Delivered" required>
+                <label for="notdelivered">Not Delivered</label>
+            </div>
+
+            <div class="form-group">
+                <label for="deliverydate">Delivery Date:</label>
+                <input type="date" name="deliverydate" required>
+            </div>
+
+            <div class="buttons">
+                <button type="submit" name="action" value="add">Create Document</button>
+                <a href="supgetshippingdoc.php"><button type="button">Get Shipping Document</button></a>
+                <a href="supviewcreatedshipments.php"><button type="button">View Data</button></a>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

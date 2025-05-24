@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>TASK | NEW SEDAWATTE TIMBER STORE</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="icon" href="timberlogo.png" type="image/x-icon">
+
+</head>
+<body>
+    <div class="header">
+        <div class="back-button">
+            <a href="javascript:history.back()">&#10096; Back</a>
+        </div>
+        NEW SEDAWATTE TIMBER STORES
+        <button class="logout-btn" onclick="window.location.href='1main.html'">LOGOUT</button>
+    </div>
+    
+    <div class="tabs">
+        <a href="managermain.html">Home</a>
+        <a href="manempmanager.html">Employee</a>
+        <a class="active" href="manaddtask.html">Add Task</a>
+        <a href="manviewinventory.php">View Inventory</a>
+        <a href="manreportsales.php">Sales Report</a>
+        <a href="mancustomerfeedback.php">Customer Feedback</a>
+    </div>
+
+    <div class="container">
+        <form action="manaddtask.php" method="POST">
+            <div class="form-group">
+                <label for="taskid">Task ID</label>
+                <input type="text" name="taskid" placeholder="Enter Task ID" required>
+            </div>
+            <div class="form-group">
+                <label for="empid">Employee ID</label>
+                <input type="text" name="empid" placeholder="Enter Employee ID" required>
+            </div>
+            <div class="form-group">
+                <label for="desc">Task Description</label>
+                <input type="text" name="desc" placeholder="Enter Task Description" required>
+            </div>
+            <div class="form-group">
+                <label for="deadline">Task Deadline</label>
+                <input type="date" name="deadline" placeholder="Select Task Deadline" required>
+            </div>
+            <div class="buttons">
+                <button type="submit" name="action" value="add">Add Task</button>
+            </div>
+        </form>
+
+        <!-- Link to another PHP page to view data -->
+        <a href="manviewemptasksheet.php" target="_blank" class="view-button">VIEW</a>
+        
+    </div>
+</body>
+</html>

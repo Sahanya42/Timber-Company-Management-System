@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>FEEDBACK | NEW SEDAWATTE TIMBER STORE</title>
+    <link rel="stylesheet" type="text/css" href="cusstyle.css">
+    <link rel="icon" href="timberlogo.png" type="image/x-icon">
+</head>
+<body>
+    <div class="header">
+        <div class="back-button">
+            <a href="javascript:history.back()">&#10096; Back</a>
+        </div>
+        
+        NEW SEDAWATTE TIMBER STORES
+        <button class="logout-btn" onclick="window.location.href='1main.html'">LOGOUT</button>
+    </div>
+
+    <div class="tabs">
+        <a href="catalog.html">Catalog</a>
+        <a href="cusplaceneworder.php">Place Order</a>
+        <a class="actvie" href="cusprovidefeedback.html">Give Feedback</a>
+        <a href="cuspurchasehistory.php">Purchase History</a>
+        <a href="cusinvoice.php">Invoice</a>
+        <a href="cusmakepayment.html">Make Payment</a>
+    </div>
+
+    <div class="container">
+        <form action="givefeedback.php" method="POST" >
+            <div class="form-group">
+                <label for="customerid">Customer ID</label>
+                <input type="text" name="customerid" placeholder="Enter Customer ID" required>
+            </div>
+            <div class="form-group">
+                <label for="feedback">Feedback</label>
+                <textarea name="feedback" placeholder="Enter your feedback" required></textarea>
+            </div>
+            
+            <div class = "buttons">
+                <button type="submit">Submit Feedback</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

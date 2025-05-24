@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>PAYMENT | NEW SEDAWATTE TIMBER STORE</title>
+    <link rel="stylesheet" type="text/css" href="cusstyle.css">
+    <link rel="icon" href="timberlogo.png" type="image/x-icon">
+</head>
+<body>
+    <div class="header">
+        <div class="back-button">
+            <a href="javascript:history.back()">&#10096; Back</a>
+        </div>
+        NEW SEDAWATTE TIMBER STORES
+        <button class="logout-btn" onclick="window.location.href='1main.html'">LOGOUT</button>
+    </div>
+
+    <div class="tabs">
+        <a href="catalog.html">Catalog</a>
+        <a href="cusplaceneworder.php">Place Order</a>
+        <a href="cusprovidefeedback.html">Give Feedback</a>
+        <a href="cuspurchasehistory.php">Pruchase History</a>
+        <a href="cusinvoice.php">Invoice</a>
+        <a class="active" href="cusmakepayment.html">Make Payment</a>
+    </div>
+
+    <div class="container">
+        <form action="cusprocesscuspayment.php" method="post">
+            <div class = "form-group">
+                <label for="customerid">Customer ID:</label>
+                <input type="text" name="customerid" placeholder="Enter Customer ID" required>
+            </div>
+
+            <div class = "form-group">
+                <label for="amount">Amount (LKR):</label>
+                <input type="number" name="amount" step="0.01" placeholder="Enter Amount">
+            </div>
+
+            <div class = "form-group">
+                <label for="paymentmethod">Payment Method:</label>
+                <select id="paymentmethod" name="paymentmethod" onchange="togglePaymentFields()" required>
+                    <option value="" disabled selected>Select Payment Method</option>
+                    <option value="credit">Credit Card</option>
+                    <option value="debit">Debit Card</option>
+                    <option value="cheque">Cheque</option>
+                </select>
+            </div>
+
+           <div class="form-group">
+                <div id="cardfields" style="display: none;">
+                    <label for="cardnumber">Card Number:</label>
+                    <input type="text" name="cardnumber" placeholder="Enter Card Number" maxlength="16">
+
+                    <label for="cardexpiry">Expiry Date:</label>
+                    <input type="month" name="cardexpiry">
+
+                    <label for="cardcvv">CVV:</label>
+                    <input type="text" name="cardcvv" maxlength="3">
+                </div>
+           </div>
+
+           <div class="form-group">
+                <div id="chequefields" style="display: none;">
+                    <label for="chequenumber">Cheque Number:</label>
+                    <input type="text" name="chequenumber" placeholder="Enter Cheque Number">
+
+                    <label for="bankname">Bank Name:</label>
+                    <input type="text" name="bankname" placeholder="Enter Bank Name">
+                </div>
+           </div>
+                
+           <div class="buttons">
+                <button type="submit" class="submit-btn">Submit Payment</button>
+           </div>
+        </form>
+    </div>
+
+    <script>
+        function togglePaymentFields() {
+            const method = document.getElementById("paymentmethod").value;
+            const cardFields = document.getElementById("cardfields");
+            const chequeFields = document.getElementById("chequefields");
+
+            cardFields.style.display = method === "credit" || method === "debit" ? "block" : "none";
+            chequeFields.style.display = method === "cheque" ? "block" : "none";
+        }
+    </script>
+</body>
+</html>

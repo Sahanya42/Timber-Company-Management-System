@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>SALARY | NEW SEDAWATTE TIMBER STORES</title>
+    <link rel = "stylesheet" type = "text/css" href = "style.css">
+    <link rel="icon" href="timberlogo.png" type="image/x-icon">
+</head>
+<body>
+    <div class="header">
+        <div class="back-button">
+            <a href="javascript:history.back()">&#10096; Back</a>
+        </div>
+        
+        NEW SEDAWATTE TIMBER STORES
+        <button class="logout-btn" onclick="window.location.href='1main.html'">LOGOUT</button>
+    </div>
+
+    <div class="tabs">
+        <a href="emptask.php">Task</a>
+        <a href="empattendance.php">Attendance</a>
+        <a class="active" href="empsalary.html">Salary</a>
+    </div>
+
+    <div class="container">
+        <form action="empsalaryfind.php" method="POST">
+            <div class="form-group">
+                <label for="employeeid">Employee ID</label>
+                <input type="text" name="employeeid">
+            </div>
+
+            <div class="form-group">
+                <label for="department">Department</label>
+                <input type="text" name="department">
+            </div>
+
+            <div class="form-group">
+                <label for="basic">Basic</label>
+                <input type="text" name="basic" readonly>
+            </div>
+
+            <div class="form-group">
+                <label for="overtime">Over Time</label>
+                <input type="text" name="overtime">
+            </div>
+
+            <div class="form-group">
+                <label for="overtimesalary">Over Time Salary</label>
+                <input type="text" name="overtimesalary" readonly>
+            </div>
+
+            <div class="form-group">
+                <label for="bonus">Bonus</label>
+                <input type="text" name="bonus" readonly>
+            </div>
+
+            <div class="form-group">
+                <label for="totsal">Total Salary</label>
+                <input type="text" name="totsal">
+            </div>
+            <div class="buttons">
+                <button type="button" class="calculate-btn" onclick="calculateSalary()">Calculate Salary</button>
+            </div>
+        </form>
+    </div>
+    <script>
+        // Fetch the PHP values dynamically
+        var basicSalary = <?php echo $basic; ?>;
+        var overtimeRate = <?php echo $overtime_rate; ?>;
+        var bonus = <?php echo $bonus; ?>;
+    
+        function calculateSalary() {
+            // Get the overtime hours entered by the user
+            var overtimeHours = parseFloat(document.querySelector('input[name="overtime"]').value) || 0;
+    
+            // Calculate overtime salary
+            var overtimeSalary = overtimeHours * overtimeRate;
+    
+            // Calculate total salary
+            var totalSalary = basicSalary + overtimeSalary + bonus;
+    
+            // Update the fields with the calculated values
+            document.querySelector('input[name="overtimesalary"]').value = overtimeSalary;
+            document.querySelector('input[name="bonus"]').value = bonus;
+            document.querySelector('input[name="totsal"]').value = totalSalary;
+        }
+    </script>
+    
+</body>
+</html>
