@@ -2,7 +2,7 @@
 <html>
 <head>
     <title>SHIPMENTS | NEW SEDAWATTE TIMBER STORES</title>
-    <link rel = "stylesheet" type = "text/css" href = "supplierstyle.css">
+    <link rel = "stylesheet" type = "text/css" href = "supplierCSS/style.css">
     <link rel="icon" href="IMG/timberlogo.png" type="image/x-icon">
     <style>
         table {
