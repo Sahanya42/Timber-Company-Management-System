@@ -3,7 +3,7 @@
 <head>
     <title>INVOICE | NEW SEDAWATTE TIMBER STORE</title>
     <link rel="stylesheet" type="text/css" href="cusstyle.css">
-    <link rel="icon" href="timberlogo.png" type="image/x-icon">
+    <link rel="icon" href="IMG/timberlogo.png" type="image/x-icon">
     <style>
         table {
             width: 80%;

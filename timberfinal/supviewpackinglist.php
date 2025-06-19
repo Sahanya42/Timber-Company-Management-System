@@ -3,7 +3,7 @@
 <head>
     <title>PACKING LIST | NEW SEDAWATTE TIMBER STORES</title>
     <link rel="stylesheet" type="text/css" href="supplierstyle.css">
-    <link rel="icon" href="timberlogo.png" type="image/x-icon">
+    <link rel="icon" href="IMG/timberlogo.png" type="image/x-icon">
     <style>
         table {
             width: 80%;

@@ -4,7 +4,7 @@
 <head>
     <title>INVOICE | NEW SEDAWATTE TIMBER STORE</title>
     <link rel="stylesheet" type="text/css" href="functionstyle.css">
-    <link rel="icon" href="timberlogo.png" type="image/x-icon">
+    <link rel="icon" href="IMG/timberlogo.png" type="image/x-icon">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.2/html2pdf.bundle.js"></script>
     <style>
         .container {
@@ -115,7 +115,7 @@
         <button id="button">Generate PDF</button>
         <div id="makepdf">
             <div class="header">
-                <img src="timberlogo.png" alt="Company Logo">
+                <img src="IMG/timberlogo.png" alt="Company Logo">
                 <h2>NEW SEDAWATTE TIMBER STORE</h2>
                 <p id="reportDate"></p>
             </div>

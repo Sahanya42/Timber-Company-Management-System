@@ -3,7 +3,7 @@
 <head>
     <title>INVOICE | NEW SEDAWATTE TIMBER STORES</title>
     <link rel="stylesheet" type="text/css" href="supplierstyle.css">
-    <link rel="icon" href="timberlogo.png" type="image/x-icon">
+    <link rel="icon" href="IMG/timberlogo.png" type="image/x-icon">
     <style>
         table {
             width: 80%;
@@ -99,7 +99,7 @@
         <button id="button">Generate PDF</button>
         <div id="makepdf">
             <div class="header">
-                <img src="timberlogo.png" alt="Company Logo">
+                <img src="IMG/timberlogo.png" alt="Company Logo">
                 <h2>NEW SEDAWATTE TIMBER STORE</h2>
                 <p id="reportDate"></p>
             </div>

@@ -3,7 +3,7 @@
 <head>
     <title>MANAGE EMPLOYEE | NEW SEDAWATTE TIMBER STORE</title>
     <link rel="stylesheet" type="text/css" href="functionstyle.css">
-    <link rel="icon" href="timberlogo.png" type="image/x-icon">
+    <link rel="icon" href="IMG/timberlogo.png" type="image/x-icon">
     <style>
         .container{
             width: 95%;
