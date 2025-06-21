@@ -37,3 +37,5 @@ This project aims to develop a comprehensive timber store management system for 
 - Each development phase will undergo testing before moving to the next.
 - Ensures functionality, usability, performance, and accuracy.
 ---
+![Screenshot 2025-06-19 164153](https://github.com/user-attachments/assets/5e270c71-4cf6-4f39-a66d-9d3b19f5abe8)
+
